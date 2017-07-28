@@ -1,5 +1,6 @@
 package com.jlastudioiv;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -33,7 +34,10 @@ public class Main {
 //        telematicsService.addReport(vehicleInfo2);
 //        telematicsService.addReport(vehicleInfo3);
 
-        telematicsService.readReports();
+        List<VehicleInfo> vehicleInfoList = telematicsService.readReports();
+        for (VehicleInfo vehicleInfo : vehicleInfoList) {
+            System.out.println(vehicleInfo.toString());
+        }
     }
 
 

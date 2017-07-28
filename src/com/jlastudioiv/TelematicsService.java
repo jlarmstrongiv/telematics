@@ -3,6 +3,8 @@ package com.jlastudioiv;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -33,9 +35,9 @@ public class TelematicsService {
             ex.printStackTrace();
         }
     }
-    Object readReports () {
+    List<VehicleInfo> readReports () {
         File file = new File(".");
-        List<Object> multipleFileContents = new ArrayList<>();
+        List<VehicleInfo> multipleFileContents = new ArrayList<>();
         for (File myFile : file.listFiles()) {
             if (myFile.getName().endsWith(".json")) {
                 try {
@@ -43,8 +45,8 @@ public class TelematicsService {
                     String myFileContents = myFileScanner.nextLine();
                     try {
                         ObjectMapper mapper = new ObjectMapper();
-                        Object myFileObject = mapper.readValue(myFileContents, VehicleInfo.class);
-                        multipleFileContents.add(myFileObject);
+                        VehicleInfo vehicleInfo = mapper.readValue(myFileContents, VehicleInfo.class);
+                        multipleFileContents.add(vehicleInfo);
                     } catch (IOException ex) { // not JsonMappingException
                         ex.printStackTrace();
                     }
@@ -58,15 +60,21 @@ public class TelematicsService {
         try {
             ObjectMapper mapper = new ObjectMapper();
             String json = mapper.writeValueAsString(multipleFileContents);
-            System.out.println(json);
+//            System.out.println(json);
         } catch (JsonProcessingException ex) {
             ex.printStackTrace();
         }
         return multipleFileContents;
     }
-    void updateHtml () {
 
-    }
+//    void updateHtml (List<Object> multipleFileContents) {
+//
+//
+//        for (Object fileContents : multipleFileContents) {
+//            VehicleInfo fileVehicleInfo = new VehicleInfo();
+//            fileVehicleInfo.toString();
+//        }
+//    }
 //    String[] readReports () {
 //        File file = new File(".");
 //        List<List> multipleFileContents = new ArrayList<>();

@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="cn.wanghaomiao:JsoupXpath:0.3.2" type="repository">
+    <properties maven-id="cn.wanghaomiao:JsoupXpath:0.3.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/wanghaomiao/JsoupXpath/0.3.2/JsoupXpath-0.3.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.7.2/jsoup-1.7.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.7.2/jsoup-1.7.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.7.2/jsoup-1.7.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/wanghaomiao/JsoupXpath/0.3.2/JsoupXpath-0.3.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/wanghaomiao/JsoupXpath/0.3.2/JsoupXpath-0.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

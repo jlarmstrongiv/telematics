@@ -7,6 +7,17 @@ public class VehicleInfo {
     private double oilOdometer;
     private double engineSize;
 
+    @Override
+    public String toString() {
+        return "VehicleInfo{" +
+                "VIN=" + VIN +
+                ", milesOdometer=" + milesOdometer +
+                ", consumption=" + consumption +
+                ", oilOdometer=" + oilOdometer +
+                ", engineSize=" + engineSize +
+                '}';
+    }
+
     void report(VehicleInfo vehicleInfo) {
 
     }
@@ -14,6 +25,15 @@ public class VehicleInfo {
     // empty constructor
     public VehicleInfo() {
     }
+
+    public VehicleInfo(int VIN, double milesOdometer, double consumption, double oilOdometer, double engineSize) {
+        this.VIN = VIN;
+        this.milesOdometer = milesOdometer;
+        this.consumption = consumption;
+        this.oilOdometer = oilOdometer;
+        this.engineSize = engineSize;
+    }
+
     // getters and setters
     public int getVIN() {
         return VIN;
